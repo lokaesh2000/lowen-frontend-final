@@ -1,3 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #0c0d10;
+  --surface: #18191d;
+  --surface-2: #23262b;
+  --surface-3: #2d3137;
+  --text: #f4f7f6;
+  --soft: #c8cecf;
+  --muted: #95a1a3;
+  --accent-teal: #14d878;
+  --accent-blue: #8d97ff;
+  --accent-amber: #d0b46a;
+  --accent-rose: #f29ab7;
+  --font-sans: 'Manrope', sans-serif;
+  --font-display: 'Sora', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top center, rgba(126, 17, 56, 0.34), transparent 22%),
+    radial-gradient(circle at 78% 10%, rgba(30, 215, 96, 0.12), transparent 18%),
+    radial-gradient(circle at 20% 0%, rgba(141, 151, 255, 0.16), transparent 22%),
+    linear-gradient(180deg, #090a0c 0%, #0c0d10 44%, #101114 100%);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 18%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 64px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 64px);
+  background-size: 100% 100%, 64px 64px, 64px 64px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

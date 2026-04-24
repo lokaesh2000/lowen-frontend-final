@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f4f7fb"/>
+  <rect x="100" y="190" width="870" height="290" rx="18" fill="#ffffff" stroke="#8ca0b8" stroke-width="8"/>
+  <rect x="950" y="250" width="120" height="125" rx="12" fill="#d7e4ef"/>
+  <rect x="120" y="518" width="840" height="18" rx="9" fill="#ef6c00"/>
+  <circle cx="250" cy="540" r="45" fill="#232b37"/>
+  <circle cx="800" cy="540" r="45" fill="#232b37"/>
+  <text x="165" y="330" fill="#131921" font-family="Arial, sans-serif" font-size="112" font-weight="700">amazon</text>
+  <path d="M240 395c110 66 268 74 424 10" fill="none" stroke="#ff9900" stroke-width="18" stroke-linecap="round"/>
+  <text x="160" y="120" fill="#455a77" font-family="Arial, sans-serif" font-size="42">Macro Demo</text>
+</svg>

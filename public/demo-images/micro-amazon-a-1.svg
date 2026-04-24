@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <rect width="720" height="420" fill="#f7f8fb"/>
+  <rect x="44" y="114" width="632" height="112" rx="16" fill="#ffffff" stroke="#dde3ed" stroke-width="6"/>
+  <g transform="translate(76 136)">
+    <rect width="78" height="68" fill="#f16d5a"/>
+    <rect x="78" width="78" height="68" fill="#ffffff"/>
+    <rect x="156" width="78" height="68" fill="#f16d5a"/>
+    <rect x="234" width="78" height="68" fill="#ffffff"/>
+    <rect x="312" width="78" height="68" fill="#f16d5a"/>
+    <rect x="390" width="78" height="68" fill="#ffffff"/>
+    <rect x="468" width="78" height="68" fill="#f16d5a"/>
+  </g>
+  <text x="48" y="74" fill="#536781" font-family="Arial, sans-serif" font-size="36">Micro Demo</text>
+</svg>
