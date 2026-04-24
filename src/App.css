@@ -28,6 +28,10 @@
   margin-top: 18px;
 }
 
+.workflow-frame {
+  padding-bottom: 104px;
+}
+
 .page-header,
 .assumptions-panel,
 .input-grid,
@@ -676,9 +680,22 @@
 }
 
 .generate-row {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0;
+  padding: 10px 14px;
+  z-index: 20;
+  border-radius: 999px;
+  background: rgba(12, 13, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .generate-button {
@@ -1103,6 +1120,10 @@
     border-radius: 20px;
   }
 
+  .workflow-frame {
+    padding-bottom: 18px;
+  }
+
   .page-header__summary,
   .assumption-card p,
   .upload-card__header p,
@@ -1143,6 +1164,19 @@
   .generate-button {
     min-width: 0;
     width: 100%;
+  }
+
+  .generate-row {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
   .preferred-panel__track {
