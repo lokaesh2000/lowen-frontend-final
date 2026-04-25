@@ -156,6 +156,7 @@ const UploadDropArea = ({
   panelTitle,
   panelSubtitle,
   description,
+  disabledMessage,
   inputId,
   disabled,
   lockedMode,
@@ -208,11 +209,7 @@ const UploadDropArea = ({
           </div>
         ) : disabled ? (
           <div className="upload-dropzone__empty">
-            <strong>
-              {lockedMode === 'preferred'
-                ? 'Clear the preferred selection to upload your own image.'
-                : 'Choose the macro image first to unlock this field.'}
-            </strong>
+            <strong>{disabledMessage || 'Choose the macro image first to unlock this field.'}</strong>
             <span>{description}</span>
           </div>
         ) : (
@@ -466,7 +463,7 @@ const App = () => {
   const macroPanelLockedToPreferred = macroMode === 'preferred';
   const macroPreferredDisabled = macroMode === 'upload';
   const microEnabled = Boolean(macroFile);
-  const microUploadDisabled = !microEnabled || microMode === 'preferred';
+  const microUploadDisabled = !microEnabled || macroMode === 'preferred' || microMode === 'preferred';
   const microPreferredDisabled = !selectedMacroGroup || microMode === 'upload';
 
   return (
@@ -539,6 +536,7 @@ const App = () => {
                 panelTitle="Macro Image (Whole Trailer Image)"
                 panelSubtitle="Use the full trailer side for geometry and perspective correction."
                 description="Drag or upload images. Prefer using the demo macro images below."
+                disabledMessage="Clear the preferred selection to upload your own image."
                 inputId="macro-upload"
                 disabled={macroPanelLockedToPreferred}
                 lockedMode={macroMode}
@@ -571,6 +569,13 @@ const App = () => {
                 panelTitle="Micro Image (Tape Close Up)"
                 panelSubtitle="Use the tape close-up to lock scale for the trailer measurements."
                 description="Drag or upload images once the macro image has been chosen."
+                disabledMessage={
+                  !microEnabled
+                    ? 'Choose the macro image first to unlock this field.'
+                    : macroMode === 'preferred'
+                      ? 'This macro image came from the preferred set. Choose one of the matched micro images below.'
+                      : 'Clear the preferred selection to upload your own image.'
+                }
                 inputId="micro-upload"
                 disabled={microUploadDisabled}
                 lockedMode={microMode}
