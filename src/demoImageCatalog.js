@@ -35,6 +35,23 @@ export const DEMO_IMAGE_GROUPS = [
       },
     ],
   },
+   {
+    id: 'test1',
+    macro: {
+      id: 'test1',
+      title: '',
+      assetPath: '/demo-images/macro1.png',
+      fileName: 'macro1.png',
+    },
+    microOptions: [
+      {
+        id: 'test1',
+        title: '',
+        assetPath: '/demo-images/micro1.png',
+        fileName: 'micro1.png',
+      },
+    ],
+  },
   {
     id: 'coke-main1',
     macro: {
