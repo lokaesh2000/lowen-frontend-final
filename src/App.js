@@ -482,6 +482,14 @@ const App = () => {
 
               <div className="page-header__utility">
                 <a
+                  className="page-header__link page-header__link--secondary"
+                  href="https://v2backend.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Agentic Approach
+                </a>
+                <a
                   className="page-header__link"
                   href="https://docs.google.com/document/d/1jzvdpXkaEDFYFblJVMswZXq4yJH7lCPqeBb7itu2dyg/edit?usp=sharing"
                   target="_blank"
